@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://HernanEspinozaDev.github.io/portfolio/',
+  base: '/',
   
   plugins: [vue()],
   
