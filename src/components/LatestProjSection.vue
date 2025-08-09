@@ -37,7 +37,7 @@
               <img 
                 :src="project.image" 
                 :alt="project.title" 
-                class="w-full h-52 md:h-[24rem] object-cover" 
+                class="w-full h-52 md:h-[24rem] object-contain" 
               />
               <!-- Overlay -->
               <div 
@@ -147,7 +147,7 @@ const Projects = ref([
   {
     id: 1,
     category: 'web development',
-    image: 'https://www.candelmed.com/_next/image?url=%2Fimage%2Fcandel.png&w=256&q=75', 
+    image: 'https://candelmed.com/image/CandelAzul.png', 
     title: 'Candel',
     description: 'Desarrollo privado para una startup durante 4 meses (agosto a noviembre de 2024). Utilicé React, Next y AWS Amplify. Trabajo colaborativo en GitHub con los integrantes del equipo. Participé en la implementación del dashboard, interacciones de la página, menús y submenús.',
     technologies: ['React', 'Next.js', 'AWS Amplify'],
@@ -157,7 +157,7 @@ const Projects = ref([
   {
     id: 2,
     category: 'Mobile App',
-    image: 'https://www.candelmed.com/_next/image?url=%2Fimage%2Fcandel.png&w=256&q=75', 
+    image: 'https://play-lh.googleusercontent.com/SrM1FfUasnMCDPTwkYbDDxUJlT46Mln5-teGhZ7IyNo9Ujf16g7sI4gAe78r3mxRKRA=w240-h480-rw', 
     title: 'CandelApp',
     description: 'Desarrollo privado para una startup durante 4 meses (agosto a noviembre de 2024). Utilicé React Native CLI. Trabajo colaborativo en GitHub con los integrantes del equipo. Implementación de vistas y tutoriales para juegos, integración de calendarios y funcionalidades, manejo de la base de datos y refactorización de funciones.',
     technologies: ['React Native CLI', 'AWS Amplify'],

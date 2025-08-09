@@ -46,7 +46,7 @@ const services = ref([
     },
     {
         id: 3,
-        icon: 'https://img.icons8.com/external-solid-design-circle/100/ffffff/external-Mobile-Development-digital-marketing-solid-design-circle.png',
+        icon: 'https://img.icons8.com/ios-filled/100/ffffff/smartphone.png',
         name: 'Desarrollo de Aplicaciones Móviles',
         description: 'Desarrollo aplicaciones móviles a medida para satisfacer las necesidades específicas de tu negocio.'
     },

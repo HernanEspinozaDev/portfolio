@@ -68,7 +68,42 @@
                                     {{ experience.role }}
                                 </template>
                             </h3>
-                            <p class="text-white">{{ experience.company }}</p>
+                            <p class="text-white">
+                                <template v-if="Array.isArray(experience.company)">
+                                    <span v-for="(companyPart, index) in experience.company" :key="index">
+                                        <a
+                                            v-if="companyPart.link"
+                                            :href="companyPart.link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="hover:underline"
+                                        >
+                                            {{ companyPart.name }}
+                                        </a>
+                                        <template v-else>
+                                            {{ companyPart.name }}
+                                        </template>
+                                        <template v-if="index < experience.company.length - 1">
+                                            -
+                                        </template>
+                                    </span>
+                                </template>
+                                <template v-else>
+                                    <template v-if="experience.companyLink">
+                                        <a
+                                            :href="experience.companyLink"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="hover:underline"
+                                        >
+                                            {{ experience.company }}
+                                        </a>
+                                    </template>
+                                    <template v-else>
+                                        {{ experience.company }}
+                                    </template>
+                                </template>
+                            </p>
                             <p class="text-white">{{ experience.date }}</p>
                         </div>
                     </div>
@@ -104,6 +139,17 @@ import googleIcon from '../assets/certificado-de-soporte-de-ti-de-google.webp';
 // Experiencias
 const Experiences = ref([
     {
+        id: 4,
+        role: 'FUNDAMENTOS DE DEVOPS',
+        company: [
+            { name: 'Talento Digital', link: 'https://talentodigitalparachile.cl/' },
+            { name: 'Adalid', link: 'https://www.adalid.cl/' }
+        ],
+        date: 'Mayo 2024 - Agosto 2025',
+        // link: 'https://www.adalid.cl/', // Removed
+        customIcon: 'https://img.icons8.com/ios-filled/100/ffffff/server.png',
+    },
+    {
         id: 1,
         role: 'AWS Academy Cloud Architecting',
         company: 'AWS Academy Graduate',
@@ -114,8 +160,13 @@ const Experiences = ref([
     {
         id: 2,
         role: 'Bootcamp Desarrollo Front End',
-        company: 'Talento Digital-Edutecno',
+        company: [
+            { name: 'Talento Digital', link: 'https://talentodigitalparachile.cl/' },
+            { name: 'Edutecno', link: 'https://edutecno.cl/' }
+        ],
         date: 'Julio 2024 - Enero 2025',
+        link: 'https://www.acreditta.com/credential/7d2add32-79ea-46a6-b73f-129ed3b6416f',
+        customIcon: 'https://www.acreditta.com/_next/image?url=https%3A%2F%2Facreditta-rutas-prod.s3.amazonaws.com%2Fmedia%2Fpublic%2Fbadge_templates%2Fimages%2F1640_badge_template_3606a218-8720-4059-9697-e0b0793dcbc1%2Fmedium.png%3Ftime%3D1754756121866&w=1920&q=75',
     },
     {
         id: 3,
