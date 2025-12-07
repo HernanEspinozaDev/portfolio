@@ -24,30 +24,92 @@
                             <span class="absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-primary border-2 border-transparent"></span>
                             <span class="relative flex items-center justify-center text-white">Contáctame</span>
                         </button>
-                        <a 
-                            href="https://drive.google.com/file/d/1UdUm1_MlxNrgh7jqvUFVMPF1gcugmDzc/view?usp=sharing" 
-                            target="_blank" 
-                            download="Hernán_Espinoza_-_Analista_Programador.pdf" 
+                        <button 
+                            @click="openCVModal"
                             class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center text-primary hover:scale-105 transition-all ease-in-out"
                         >
                             Descargar CV
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- CV Modal -->
+    <Teleport to="body" v-if="showCVModal">
+        <div 
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            @click.self="closeCVModal"
+        >
+            <div class="bg-gray-900 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+                <!-- Header -->
+                <div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-700">
+                    <h2 class="text-white text-lg sm:text-xl font-semibold">Mi CV</h2>
+                    <div class="flex items-center gap-3">
+                        <button 
+                            @click="downloadCV"
+                            class="bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition-colors text-sm sm:text-base"
+                        >
+                            Descargar
+                        </button>
+                        <button 
+                            @click="closeCVModal"
+                            class="text-gray-400 hover:text-white text-2xl transition-colors"
+                            aria-label="Cerrar modal"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- PDF Container -->
+                <div class="flex-1 overflow-auto">
+                    <iframe 
+                        :src="cvPdfUrl"
+                        class="w-full h-full min-h-[500px]"
+                        title="CV Hernán Espinoza"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </Teleport>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import cvPdf from '../assets/CV Hernán Espinoza Ing. Informática.pdf';
+
 AOS.init();
+
+const showCVModal = ref(false);
+const cvPdfUrl = cvPdf;
 
 const scrollToSection = (href) => {
     const section = document.querySelector(href);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
+};
+
+const openCVModal = () => {
+    showCVModal.value = true;
+    document.body.style.overflow = 'hidden';
+};
+
+const closeCVModal = () => {
+    showCVModal.value = false;
+    document.body.style.overflow = 'auto';
+};
+
+const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = cvPdfUrl;
+    link.download = 'Hernán_Espinoza_-_Analista_Programador.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 };
 </script>

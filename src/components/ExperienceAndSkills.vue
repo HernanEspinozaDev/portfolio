@@ -107,6 +107,27 @@
                             <p class="text-white">{{ experience.date }}</p>
                         </div>
                     </div>
+                    <!-- Enlace a Credly -->
+                    <a 
+                        href="https://www.credly.com/users/hernan-maximiliano-espinoza-castillo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-4 rounded-xl p-4 bg-[#111a3e] shadow-lg border border-[#1f1641] hover:border-primary transition-colors"
+                    >
+                        <div class="w-1/4 flex items-center justify-center">
+                            <img 
+                                :src="credlyIcon" 
+                                alt="Credly" 
+                                class="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24"
+                            />
+                        </div>
+                        <div class="w-3/4">
+                            <h3 class="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                                Ver más certificados
+                            </h3>
+                            <p class="text-gray-300 text-lg">Credly</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -135,19 +156,21 @@ const Skills = ref([
 // Importar imágenes personalizadas
 import awsIcon from '../assets/aws-academy-graduate-aws-academy-cloud-architecting.webp';
 import googleIcon from '../assets/certificado-de-soporte-de-ti-de-google.webp';
+import devopsIcon from '../assets/devops.webp';
+import credlyIcon from '../assets/credly.svg';
 
 // Experiencias
 const Experiences = ref([
     {
         id: 4,
-        role: 'FUNDAMENTOS DE DEVOPS',
+        role: 'BOOTCAMP ESPECIALISTA DEVOPS',
         company: [
             { name: 'Talento Digital', link: 'https://talentodigitalparachile.cl/' },
             { name: 'Adalid', link: 'https://www.adalid.cl/' }
         ],
-        date: 'Mayo 2024 - Agosto 2025',
-        // link: 'https://www.adalid.cl/', // Removed
-        customIcon: 'https://img.icons8.com/ios-filled/100/ffffff/server.png',
+        date: 'Mayo 2025 - Agosto 2025',
+        link: 'https://www.acreditta.com/credential/64a3bd72-6b07-4a6a-a3ed-3453130602b1',
+        customIcon: devopsIcon,
     },
     {
         id: 1,
