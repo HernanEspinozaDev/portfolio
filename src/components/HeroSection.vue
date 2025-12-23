@@ -80,12 +80,11 @@
 import { ref } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import cvPdf from '../assets/CV Hernán Espinoza Ing. Informática.pdf';
 
 AOS.init();
 
 const showCVModal = ref(false);
-const cvPdfUrl = cvPdf;
+const cvPdfUrl = new URL('../assets/CV Hernán Espinoza Ing. Informática.pdf', import.meta.url).href;
 
 const scrollToSection = (href) => {
     const section = document.querySelector(href);
