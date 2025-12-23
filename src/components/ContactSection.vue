@@ -251,7 +251,7 @@
   const sendEmail = () => {
     emailjs
       .send(
-        'service_ag9wm18',    // Service ID
+        'service_jz7s5ho',    // Service ID
         'template_ihwi1dp',   // Template ID
         {
           from_email: formData.value.email,
