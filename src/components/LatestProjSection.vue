@@ -172,7 +172,7 @@ const Projects = ref([
     description: 'Portafolio hecho en Vue con Vite y Tailwind CSS. Página: hernanespinozadev.website.',
     technologies: ['Vue.js', 'Vite', 'Tailwind CSS'],
     gitURL: 'https://github.com/HernanEspinozaDev/portfolio',
-    webURL: 'https://hernanespinozadev.website'
+    webURL: 'https://portfolio.hotusoft.com/'
   },
 ]);
 
