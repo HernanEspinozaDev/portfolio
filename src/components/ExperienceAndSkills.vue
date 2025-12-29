@@ -151,6 +151,9 @@ const Skills = ref([
     { id: 10, name: 'MongoDB', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg' },
     { id: 11, name: 'PostgreSQL', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg' },
     { id: 12, name: 'Docker', icon: 'https://cdn.worldvectorlogo.com/logos/docker.svg' },
+    { id: 13, name: 'Rust', icon: 'https://rustacean.net/assets/rustacean-flat-happy.svg' },
+    { id: 14, name: 'AWS Lambda', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Orange_lambda.svg' },
+    { id: 15, name: 'DynamoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg' },
 ]);
 
 // Importar imágenes personalizadas

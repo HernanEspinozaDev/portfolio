@@ -135,6 +135,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import portfolioImage from '../assets/portafolio.webp'; // Importa tu imagen
+import notasrustImage from '../assets/notasrustweb.webp';
 
 // Definimos las categorías en español
 const categories = [
@@ -144,6 +145,16 @@ const categories = [
 ];
 
 const Projects = ref([
+  {
+    id: 4,
+    category: 'web development',
+    image: notasrustImage, 
+    title: 'Notas Serverless (Rust + Vue)',
+    description: 'Una aplicación de notas moderna y rápida construida con Vue 3, Tailwind CSS, y respaldada por una arquitectura serverless en Rust sobre AWS Lambda.',
+    technologies: ['Vue 3', 'Tailwind CSS', 'Rust', 'AWS Lambda', 'DynamoDB'],
+    gitURL: 'https://github.com/HernanEspinozaDev/notasrust-frontend', 
+    webURL: 'https://notasrust.testingpage.store/'
+  },
   {
     id: 1,
     category: 'web development',
