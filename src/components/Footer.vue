@@ -6,14 +6,14 @@
       <div 
         class="p-6 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto"
       >
-        <!-- LOGO + Enlace -->
+        <!-- LOGO + Enlace   -->
         <a 
           href="https://hotusoft.com" 
           target="_blank" 
           rel="noopener noreferrer"
           class="flex items-center space-x-2 mb-4 md:mb-0"
         >
-          <!-- Logo de HotuSoft -->
+          <!-- Logo de HotuSoft  -->
           <img 
             src="../assets/HotuSoft-Logo-Large.webp" 
             alt="HotuSoft Logo" 
