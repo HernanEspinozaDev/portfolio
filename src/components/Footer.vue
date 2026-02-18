@@ -13,7 +13,7 @@
           rel="noopener noreferrer"
           class="flex items-center space-x-2 mb-4 md:mb-0"
         >
-          <!-- Logo de HotuSoft  -->
+          <!-- Logo de HotuSoft -->
           <img 
             src="../assets/HotuSoft-Logo-Large.webp" 
             alt="HotuSoft Logo" 
